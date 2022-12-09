@@ -10,7 +10,7 @@ import AppForm from './AppForm';
 const { Navigator, Screen } = createBottomTabNavigator();
 const Tab = createBottomTabNavigator();
 
-function AppTab() {
+export default function AppTab() {
     return (
         <NavigationContainer>
             <Navigator
@@ -32,7 +32,7 @@ function AppTab() {
             >
                 <Screen name="AppList" component={AppList}  
                 options={{tabBarLabel: "Lista"}, { title: 'Lista' }} />
-                <Screen name="AppForm" component={AppForm} 
+                <Screen name="AppForm" component={AppForm}
                 options={{tabBarLabel: "Formulário"}, { title: 'Formulário' }}/>
             </Navigator>
         </NavigationContainer>
@@ -66,4 +66,3 @@ function MyTabs() {
 }
 */}
 
-export default AppTab;
